@@ -1,0 +1,20 @@
+{
+  "name": "ssh2srv",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "dev": "nodemon -w ./modules index.js",
+    "test": "jest"
+  },
+  "author": "Lionel",
+  "license": "Apache-2.0",
+  "description": "A very simple SFTP download server based on @mscdex/ssh2",
+  "dependencies": {
+    "ssh2": "^1.16.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9"
+  }
+}
