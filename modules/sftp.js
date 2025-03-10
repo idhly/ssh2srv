@@ -93,15 +93,15 @@ function sftpCallback(accept, reject) {
              This is used to demostrate the situation that the chunks are not aligned correctly
              ===> make a unaligned packet <===
           */
-          if (reqId===100) {
+          /*if (reqId===100) {
             setTimeout(()=>{
               debugLog(`fs.read (id: ${reqId}) reads ${bytesRead} bytes, send data (delayed)`);
               sftpChannel.data(reqId, buffer.subarray(0, bytesRead));
             },100);
-          } else {
+          } else {*/
             debugLog(`fs.read (id: ${reqId}) reads ${bytesRead} bytes, send data`);
             sftpChannel.data(reqId, buffer.subarray(0, bytesRead));
-          }
+          //}
         }
       }
     );
@@ -134,8 +134,8 @@ function sftpCallback(accept, reject) {
         uid: stats.uid,
         gid: stats.gid,
         size: stats.size,
-        atime: stats.atime, //Math.floor(stats.atimeMs / 1000),
-        mtime: stats.mtime, //Math.floor(stats.mtimeMs / 1000)
+        atime: stats.atime,
+        mtime: stats.mtime,
       });
     });
   });
@@ -155,8 +155,8 @@ function sftpCallback(accept, reject) {
         uid: stats.uid,
         gid: stats.gid,
         size: stats.size,
-        atime: stats.atime, //Math.floor(stats.atimeMs / 1000),
-        mtime: stats.mtime, //Math.floor(stats.mtimeMs / 1000)
+        atime: stats.atime,
+        mtime: stats.mtime,
       });
     });
   });

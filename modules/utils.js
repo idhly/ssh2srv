@@ -1,7 +1,7 @@
 const debugFlag = true;
 const fs = require("fs");
 const path = require("path");
-const globalPath = "<HOME PATH>"; //<==== This needs to be set to HOME directory of SFTP server
+const globalPath = process.cwd(); //<==== This needs to be set to HOME directory of SFTP server
 const username = "sftpuser";
 const password = "sftpuser";
 const fsConst = {
