@@ -7,7 +7,7 @@
     "dev": "nodemon -w ./modules index.js",
     "test": "jest"
   },
-  "author": "Lionel",
+  "author": "idhly",
   "license": "Apache-2.0",
   "description": "A very simple SFTP download server based on @mscdex/ssh2",
   "dependencies": {
